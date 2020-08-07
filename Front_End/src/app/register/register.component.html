@@ -1,0 +1,201 @@
+<app-alerts></app-alerts>
+<br>
+<br>
+
+<div class="py-5">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+
+        <span class="anchor" id="formLogin"></span>
+
+        <!-- form card login -->
+        <div class="card rounded-0">
+          <div class="card-header">
+            <h3 class="mb-0">Register</h3>
+          </div>
+          <div class="card-body">
+            <form class="form" 
+                  [formGroup]="form"
+                  (submit)="registerUser(Username.value,Email.value,Password.value,Address.value , Num_phone.value , City.value , Country.value ,Firstname.value,Lastname.value,type.value,fileInput.value); "                  >
+              
+                  <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text"
+                              class="form-control" 
+                              formControlName="username"
+                              id="username"
+                              #Username
+                              minlength="3"
+                              maxlength="10"
+                              required
+                              >
+                         <div class="alert alert-danger" *ngIf="form.get('username').touched && form.get('username').invalid">
+                            <div *ngIf="form.get('username').errors.required">
+                            Username is Required
+                            </div>
+                            <div *ngIf="form.get('username').errors.minlength">
+                            This field should have at least {{form.get('username').errors.minlength.requiredLength}} characters not  {{form.get('username').errors.minlength.actualLength}}
+                            </div>
+                        </div>
+
+                        <label for="firstname">Firstname</label>
+                        <input type="text"
+                              class="form-control" 
+                              formControlName="firstname"
+                              id="firstname"
+                              #Firstname
+                              minlength="3"
+                              maxlength="10"
+                              required
+                              pattern="[a-zA-Z]+">
+                         <div class="alert alert-danger" *ngIf="form.get('firstname').touched && form.get('firstname').invalid">
+                            <div *ngIf="form.get('firstname').errors.required">
+                            firstname is Required
+                            </div>
+                            <div *ngIf="form.get('firstname').errors.minlength">
+                            This field should have at least {{form.get('firstname').errors.minlength.requiredLength}} characters not  {{form.get('firstname').errors.minlength.actualLength}}
+                            </div>
+                            <div *ngIf="form.get('firstname').errors.pattern">
+                            Sorry This field should have just characters 
+                            </div>
+                        </div>
+
+
+                        <label for="lastname">Lastname</label>
+                        <input type="text"
+                              class="form-control" 
+                              formControlName="lastname"
+                              id="lastname"
+                              #Lastname 
+                              minlength="3"
+                              maxlength="10"
+                              required
+                              pattern="[a-zA-Z]+">
+                         <div class="alert alert-danger" *ngIf="form.get('lastname').touched && form.get('lastname').invalid">
+                            <div *ngIf="form.get('lastname').errors.required">
+                            lastname is Required
+                            </div>
+                            <div *ngIf="form.get('lastname').errors.minlength">
+                            This field should have at least {{form.get('lastname').errors.minlength.requiredLength}} characters not  {{form.get('lastname').errors.minlength.actualLength}}
+                            </div>
+                            <div *ngIf="form.get('lastname').errors.pattern">
+                            Sorry This field should have just characters so please remove
+                            </div>
+                        </div>
+
+                        <label for="email">email</label>
+                        <input type="text"
+                              class="form-control" 
+                              formControlName="email"
+                              id="email"
+                              #Email
+                              required
+                              email
+                              placeholder="eg:ax@gmail.com"
+                              >
+                         <div class="alert alert-danger" *ngIf="form.get('email').touched && form.get('email').invalid">
+                            <div *ngIf="form.get('email').errors.required"  >
+                            email is Required
+                            </div>
+                            <div *ngIf="form.get('email').errors.email"  >
+                              please enter a valid form of email
+                            </div>
+
+                        </div>
+
+
+                       
+
+                        <label for="password">Password</label>
+                        <input type="password"
+                              class="form-control" 
+                              formControlName="password"
+                              id="password"
+                              #Password
+                              minlength="5"
+                              maxlength="15"
+                              required
+                              >
+                         <div class="alert alert-danger" *ngIf="form.get('password').touched && form.get('password').invalid">
+                            <div *ngIf="form.get('password').errors.required">
+                            password is Required
+                            </div>
+                            <div *ngIf="form.get('password').errors.minlength">
+                            This field should have at least {{form.get('password').errors.minlength.requiredLength}} characters not  {{form.get('password').errors.minlength.actualLength}}
+                            </div>
+                        </div>
+
+                        <label for="address">address</label>
+                        <input type="text"
+                              class="form-control" 
+                              formControlName="address"
+                              id="address"
+                              #Address
+                               >
+                               
+                      <label for="num_phone">Phone Number</label>
+                        <input type="tel"
+                              class="form-control" 
+                              formControlName="num_phone"
+                              id="num_phone"
+                              #Num_phone
+                              >
+
+                       <label for="city">City</label>
+                        <input type="text"
+                              class="form-control" 
+                              formControlName="city"
+                              id="city"
+                              #City
+                               >
+
+                     <label for="country">country</label>
+                        <input type="text"
+                              class="form-control" 
+                              formControlName="country"
+                              id="country"
+                              #Country
+                               >
+                     
+
+                     <label for="file">Image</label>
+                        <input type="file"
+                              class="form-control" 
+                              formControlName="file"
+                              id="file"
+                              #fileInput
+                              style="background-color: #000;border-radius: 4rem;color: #fff;cursor: pointer;"
+                               >
+                      
+                     <label>Type:</label>
+                      <select  id="type" 
+                               #type 
+                               name="type" 
+                               class="form-control" 
+                               formControlName="type"
+                               required>
+                      <option value="Vendeur">Vendeur</option>
+                      <option value="Client">Client</option> 
+                      
+                      </select>
+                     
+                    </div>
+              
+              <input type="submit" value="SUBMIT" (click)="gotoTop()" [disabled]=!form.valid class="btn btn-primary float-right "><br>
+            </form>
+            <a href="app-login" class="pull-left">Login</a>
+          </div>
+          <!--/card-block-->
+        </div>
+        <!-- /form card login -->
+        
+      </div>
+  
+  
+    </div>
+  </div>
+
+  <ngx-loading-bar color="red"  ref="router"></ngx-loading-bar>
+  <ngx-loading-bar color="red"  ref="http"></ngx-loading-bar>
+
+

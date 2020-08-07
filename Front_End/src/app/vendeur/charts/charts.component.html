@@ -1,0 +1,73 @@
+<div class="col-md-10">
+        <div>
+          
+          <h5>popular Category</h5>
+                <div style="display: block">
+                  <canvas baseChart
+                          [datasets]="barChartData"
+                          [labels]="barChartLabels"
+                          [options]="barChartOptions"
+                          [legend]="barChartLegend"
+                          [chartType]="barChartType">
+                  </canvas>
+                </div>
+              </div>
+              <hr/>
+        <h5>most liked category</h5>
+			  <div style="display: block">
+                <canvas baseChart
+                            [data]="doughnutChartData"
+                            [labels]="doughnutChartLabels"
+                            [chartType]="doughnutChartType"
+                            [colors]="doughnutChartColors"></canvas>
+              </div>
+              <hr/>
+              <h5>most posted category</h5>
+              <div style="display: block">
+                
+                <canvas baseChart
+                        [data]="pieChartData"
+                        [labels]="pieChartLabels"
+                        [chartType]="pieChartType"
+                        [colors]="pieChartColors"></canvas>
+              </div>
+        <hr/>
+        <h6>Least Popular Products</h6>
+        <hr/>
+        <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered " id="example">
+          <thead>
+            <tr>
+              <th>Name product</th>
+              <th>Count</th>
+              <th>Like</th>
+              <th>Mean</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="odd gradeX" *ngFor="let task of tasks " >
+              <td>
+                  <span>{{task.Product_name}}</span>
+              </td>
+              <td>
+                <span>{{task.Count}}</span>
+              </td>
+              <td>
+                  <span>{{task.like}}</span>
+              </td>
+              <td>
+                <span>{{task.Mean}}</span>
+              </td>
+              <td class="text-right">
+                <button class="btn btn-danger" title="delete task" (click)="delete(task)">Delete</button>
+              </td>
+            </tr>
+						</tbody>
+						
+            </table>
+            <hr/>
+            
+          
+</div>
+
+

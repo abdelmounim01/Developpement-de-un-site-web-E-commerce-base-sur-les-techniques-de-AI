@@ -1,0 +1,70 @@
+<nav class="navbar navbar-expand-md navbar navbar-dark bg-dark">
+    <div class="navbar-collapse" [class.collapse]="collapsed" id="navbarContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item" ngbDropdown>
+          <a class="nav-link" style="cursor: pointer" ngbDropdownToggle id="navbarDropdown1" role="button">
+            English
+          </a>
+          <div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
+            <a ngbDropdownItem href="#" (click)="$event.preventDefault()">English</a>
+            <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Spanish</a>
+            <a ngbDropdownItem href="#" (click)="$event.preventDefault()"> Fransh </a>
+            <a ngbDropdownItem href="#" (click)="$event.preventDefault()">العربية</a>
+          </div>
+        </li>
+  
+        <li class="nav-item" ngbDropdown>
+          <a class="nav-link" style="cursor: pointer" ngbDropdownToggle id="navbarDropdown2" role="button">
+            {{message}}
+          </a>
+          <div ngbDropdownMenu aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-right" style="cursor:pointer">
+            <a ngbDropdownItem (click)="newMessageDollar()"> <i class="fas fa-dollar-sign"></i>  US Dollar  </a>
+            <a ngbDropdownItem (click)="newMessageDH()"><i class="fab fa-gg"></i> MAD </a>
+            <a ngbDropdownItem (click)="newMessageEuro()"><i class="fas fa-euro-sign"></i> Euro  </a>
+          </div>
+        </li>
+
+        <li class="nav-item" ngbDropdown display="dynamic" placement="bottom-right">
+          <a class="nav-link" style="cursor: pointer" ngbDropdownToggle id="navbarDropdown3" role="button">
+            <!--Drop-down-form-->
+                  Account
+                  <div ngbDropdownMenu aria-labelledby="navbarDropdown3">
+                    <form class="form px-4 py-3" (submit)="loginUser(Email.value,Password.value);" [formGroup]="form">
+                      <div class="form-group">
+                        <ngx-validation-errors-field>
+                        <label for="exampleDropdownFormEmail1">Email address</label>
+                        <input type="email" #Email class="form-control rounded-0" formControlName="email" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+                      </ngx-validation-errors-field>
+                      </div>
+                      <div class="form-group">
+                       <ngx-validation-errors-field>
+                        <label for="exampleDropdownFormPassword1">Password</label>
+                        <input type="password" #Password class="form-control rounded-0"  formControlName="password" id="exampleDropdownFormPassword1" placeholder="Password">
+                       </ngx-validation-errors-field>
+                      </div>
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                        <label class="form-check-label" for="dropdownCheck">
+                          Remember me
+                        </label>
+                      </div>
+                      <button type="submit" [disabled]="!form.valid" class="btn btn-primary">Sign in</button>
+                    </form>
+                    <div class="dropdown-divider"></div>
+                    <button onclick="window.location.href='/app-register'" ngbDropdownItem>New around here? Sign up</button>
+                    <button onclick="window.location.href='/app-confirmation'" ngbDropdownItem>Forgot password?</button>
+                  </div>
+            <!---->
+          </a>
+        </li>
+        <li class="nav-item" >
+        <a class="nav-link " onclick="window.location.href='/app-chatbot'" style="cursor: pointer" id="navbarDropdown3" role="button">
+          About
+        </a>
+        </li>
+      </ul>
+      
+    </div>
+  </nav>
+
+

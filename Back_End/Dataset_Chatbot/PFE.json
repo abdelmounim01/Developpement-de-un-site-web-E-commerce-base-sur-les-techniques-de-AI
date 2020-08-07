@@ -1,0 +1,683 @@
+{"intents": [
+	    {"tag": "Bonjour",
+         "patterns": ["Bonsoir","Bonjour","Salut","Laisse moi te poser une question"],
+         "responses": ["Salut, Merci d'avoir posé la question", "Salut, comment puis-je aider?"],
+         "context": [""]
+        },
+        {"tag": "Hello",
+         "patterns": ["How are you","Hey","Hello","let me ask you a question","Hi"],
+         "responses": ["Hello, thanks for asking", "Hi there, how can I help?"],
+         "context": [""]
+        },
+        {"tag": "Au_revoir",
+         "patterns": ["Bye","Au revoir"],
+         "responses": ["Bye","Au revoir"],
+         "context": [""]
+        },
+        {"tag": "Bye",
+         "patterns": ["Good Bye","Bye","Chaw"],
+         "responses": ["GoodBye"],
+         "context": [""]
+        },
+        {"tag": "Merci",
+         "patterns": ["Merci","Merci Beaucoup","C'est utile", "Génial, merci", "Merci de m'aider"],
+         "responses": ["Avec Plaisir","Heureux d'aider!" , "À tout moment!"],
+         "context": [""]
+        },
+        {"tag": "Thanks", 
+         "patterns": ["Thanks" ,"Thank you" , "That's helpful" , "Awesome, thanks" , "Thanks for helping me" ], 
+         "responses": ["Happy to help!" , "Any time!" ,"My pleasure"], 
+         "context": [""] 
+        },
+        {"tag": "Vendre",
+         "patterns": ["Que vendre vous dans le site web?"],
+         "responses": ["Notre site web vendre multi genres des produits et non pas spécifie"],
+         "context": [""]
+        },
+        {"tag": "Sell",
+         "patterns": ["What do you sell on the website?"],
+         "responses": ["Our website sell multi kind of products and not specify"],
+         "context": [""]
+        },
+        {"tag": "genre",
+         "patterns": ["Quelle sont les genres , types ou catégories de produits que vendez vous?"],
+         "responses": ["Les genres des produits sont : Livres, accessoires, vêtements, chaussures, soins personnels, articles de sport et téléphones"],
+         "context": [""]
+        },
+        {"tag": "kind",
+         "patterns": ["What kinds , types or categories of products do you sell?"],
+         "responses": ["The kinds of products are: Books,Accessories,Apparel,Footwear,Personnal Care,Sporting Goods and Phones"],
+         "context": [""]
+        },
+        {"tag": "genre_Books",
+         "patterns": ["Quelle sont les genres , types ou subcatégories de livres que vendez vous?"],
+         "responses": ["Les genres des livres sont : Littérature, Familles et relations, Fantaisie, Enfants, Classiques, Crime, Nouvelles, Jeunes adultes, Romance, Science-fiction, Général et autres"],
+         "context": [""]
+        },
+        {"tag": "kind_Books",
+         "patterns": ["What kinds , types or subcategories of books do you sell?"],
+         "responses": ["The kinds of books are : Literature,Families and Relationship,Fantasy,Children,Classics,Crime,Short Stories,Young Adults,Romance,Science fiction,General and Others"],
+         "context": [""]
+        },
+        {"tag": "genre_Accessories",
+         "patterns": ["Quelle sont les genres , types ou subcatégories de accessoires que vendez vous?"],
+         "responses": ["Les genres des accessoires sont : Ceintures, bijoux, lunettes, sacs, couvre-chefs, portefeuilles, boutons de manchette, gants, montres et coffret cadeau"],
+         "context": [""]
+        },
+        {"tag": "kind_Accessories",
+         "patterns": ["What kinds , types or subcategories of accessories do you sell?"],
+         "responses": ["The kinds of accessories are : Belts,Jewellery,Eyewear,Bags,Headwear,Wallets,Cufflinks,Gloves,Watches and Gift set"],
+         "context": [""]
+        },
+        {"tag": "genre_Apparel",
+         "patterns": ["Quelle sont les genres , types ou subcatégories de vêtements que vendez vous?"],
+         "responses": ["Les genres des vêtements sont : Écharpes, sous-vêtements, bas, vêtements de dessus, ensemble de vêtements, robe, cravates, étoles, vêtements de détente et de nuit et sari"],
+         "context": [""]
+        },
+        {"tag": "kind_Apparel",
+         "patterns": ["What kinds, types or subcategories of clothes do you sell?"],
+         "responses": ["The kinds of clothes are : Scarves,Innerwear,Bottomwear,Topwear,Apparel set,Dress,Ties,Stoles,Loungewear and nightwear and Saree"],
+         "context": [""]
+        },
+        {"tag": "genre_Footwear",
+         "patterns": ["Quelle sont les genre , types ou subcatégories de chaussures que vendez vous?"],
+         "responses": ["Les genres des chaussures sont : Chaussettes, chaussures, tongs et sandales"],
+         "context": [""]
+        },
+        {"tag": "kind_Footwear",
+         "patterns": ["What kinds, types or sub-categories of shoes or footwear you sell?"],
+         "responses": ["The kinds of shoes are : Socks,Shoes,Flip flops and Sandals"],
+         "context": [""]
+        },
+        {"tag": "genre_Personnal_Care",
+         "patterns": ["Quelle sont les genre , types ou subcatégories de soins personnels que vendez vous?"],
+         "responses": ["les genres des soins personnels sont : Parfum, lèvres, yeux, cheveux, maquillage, bain et corps, soins de la peau et ongles"],
+         "context": [""]
+        },
+        {"tag": "kind_Personnal_Care",
+         "patterns": ["What kinds, types or subcategories of personal care do you sell?"],
+         "responses": ["The kinds of Personnal Care are : Fragrance,Lips,Eyes,Hair,Makeup,Bath and Body,Skin Care and Nails"],
+         "context": [""]
+        },
+        {"tag": "genre_Sporting_Goods",
+         "patterns": ["Quelle sont les genre , types ou subcatégories de articles de sport que vendez vous?"],
+         "responses": ["Les genres des articles de sport sont : Sacs, couvre-chefs, bouteille d'eau, lunettes, montres et équipement de sport"],
+         "context": [""]
+        },
+        {"tag": "kind_Sporting_Goods",
+         "patterns": ["What kinds, types or subcategories of Sporting Goods that you sell?"],
+         "responses": ["The kinds of Sporting Goods are : Bags,Headwear,Water Bottle,Eyewear,Watches and Sport equipement"],
+         "context": [""]
+        },
+        {"tag": "genre_Phones",
+         "patterns": ["Quelle sont les genre , types ou subcatégories de téléphones que vendez vous?"],
+         "responses": ["Les genres de téléphones sont : Android,Honor,Vivo,Sony,Oppo,Redmi,Nokia,Oneplus,Apple,Samsung et Huawei"],
+         "context": [""]
+        },
+        {"tag": "kind_Phones",
+         "patterns": ["What kinds, types or subcategories of phones do you sell?"],
+         "responses": ["The kinds of phones are : Android,Honor,Vivo,Sony,Oppo,Redmi,Nokia,Oneplus,Apple,Samsung and Huawei"],
+         "context": [""]
+        },
+        {"tag": "clientVsVisiteur",
+         "patterns": ["Quelle est la différence entre client et visiteur?"],
+         "responses": ["Le client à des privilèges plus que le vendeur, comme exemple : donne son avis sur les produits et faire j'aime sur an produits si il aime et aussi en le affiche les produits qui peut les aimer en se basant sur leurs réactions sur les autres produits"],
+         "context": [""]
+        },
+        {"tag": "clientVsVisitor",
+         "patterns": ["What is the difference between client and visitor?"],
+         "responses": ["The customer has more privileges than the seller, as an example: give his opinion on the products and do the likes on a products if he likes and also displays the products which can like them based on their reactions on others products"],
+         "context": [""]
+        },
+        {"tag": "devenir_client",
+         "patterns": ["Comment je peux devient et devenir un client?"],
+         "responses": ["Tu peux devenir un client quand tu crée un compte en spécifie genre client et s'authentifie"],
+         "context": [""]
+        },
+        {"tag": "become_client",
+         "patterns": ["How can I become and become a client?"],
+         "responses": ["You can become a client when you create an account, specify client type and authenticate"],
+         "context": [""]
+        },
+        {"tag": "age",
+         "patterns": ["Quelle catégories de personnes et de âge et genre de personnes et sex votre site web cibles?"],
+         "responses": ["Notre site web est valables pour tout le monde,Petit et grands,Femme et Homme,Fille et Garcon"],
+         "context": [""]
+        },
+        {"tag": "age_eng",
+         "patterns": ["What categories of people and age and kind of people and gender , sex is your website targeting?"],
+         "responses": ["Our website is valid for everyone, Young and old, Woman and Man, Girl and Boy"],
+         "context": [""]
+        },
+        {"tag": "livraison",
+         "patterns": ["Est ce que vous faites la livraison des produits?"],
+         "responses": ["Notre site web est juste fait le contact de client avec les vendeurs, nous somme pas résponsable pour la livraison"],
+         "context": [""]
+        },
+        {"tag": "delivery",
+         "patterns": ["Do you deliver the products?"],
+         "responses": ["Our Website is just made customer contact with sellers, we are not responsible for delivery"],
+         "context": [""]
+        },
+        {"tag": "devenir_vendeur",
+         "patterns": ["Comment je peux devient ou devenir un vendeur?"],
+         "responses": ["Tu peux devenir un client quand tu crée un compte en spécifie genre vendeur et s'authentifie"],
+         "context": [""]
+        },
+        {"tag": "become_vendeur",
+         "patterns": ["How can I become a seller?"],
+         "responses": ["You can become a customer when you create an account, specify seller type and authenticate"],
+         "context": [""]
+        },
+        {"tag": "gratuit",
+         "patterns": ["Est ce que le site web est gratuit ou bien payant?"],
+         "responses": ["Notre site web est gratuit et valables pour tout le monde"],
+         "context": [""]
+        },
+        {"tag": "free",
+         "patterns": ["Is the website free or paid?"],
+         "responses": ["Our website is free and valid for everyone"],
+         "context": [""]
+        },
+        {"tag": "devise",
+         "patterns": ["Quelles sont les devises qui sont disponibles dans votre site web?"],
+         "responses": ["Les devise disponibles sont:Dirham,Euro,Dollar"],
+         "context": [""]
+        },
+        {"tag": "currency",
+         "patterns": ["What currencies are available on your website?"],
+         "responses": ["The available currencies are:Dirham,Euro,Dollar"],
+         "context": [""]
+        },
+        {"tag": "acheté",
+         "patterns": ["Comment je peux acheter les produits d'aprés votre site web?"],
+         "responses": ["L'achat des produits se fait dans notre site web en contacter le vendeur pour négocier avec lui"],
+         "context": [""]
+        },
+        {"tag": "buy",
+         "patterns": ["How can I buy the products from your website?"],
+         "responses": ["The purchase of the products is done on our website by contacting the seller to negotiate with him"],
+         "context": [""]
+        },
+        {"tag": "how_many",
+         "patterns": ["How many products does your website contain?"],
+         "responses": ["25000 Products"],
+         "context": [""]
+        },
+        {"tag": "plus_populaire_cat",
+         "patterns": ["Quelle catégorie plus populaire dans votre site web?"],
+         "responses": ["La plus populaire catégorie est : Téléphones"],
+         "context": [""]
+        },
+        {"tag": "most_popular_cat",
+         "patterns": ["Which category is most popular on your website?"],
+         "responses": ["The most popular category is: Phones"],
+         "context": [""]
+        },
+        {"tag": "plus_populaire_subcat",
+         "patterns": ["Quelle subcatégorie plus populaire dans votre site web?"],
+         "responses": ["La plus populaire subcatégorie est : Honor"],
+         "context": [""]
+        },
+        {"tag": "most_popular_subcat",
+         "patterns": ["Which subcategory is most popular on your website?"],
+         "responses": ["The most popular subcategory is: Honor"],
+         "context": [""]
+        },
+        {"tag": "cherche",
+         "patterns": ["Comment je peux rechercher sur les produits dans votre site web?"],
+         "responses": ["Il existe deux types de recherche dans notre site web : recherche par écriture et recherche par image"],
+         "context": [""]
+        },
+        {"tag": "search",
+         "patterns": ["How can i search for products in your website?"],
+         "responses": ["There are two types of search on our website: search by writing and search by image"],
+         "context": [""]
+        },
+        {"tag": "patron",
+         "patterns": ["Qui sont les directeurs et administrateurs, les patrons et les responsables de votre site Web?"],
+         "responses": ["Les patrons notre site web sont : Baki Senhaji Abdelmounim et Errzieq Mehdi"],
+         "context": [""]
+        },
+        {"tag": "boss",
+         "patterns": ["Who are the directors and admin, boss and heads of your website?"],
+         "responses": ["The boss of our website are: Baki Senhaji Abdelmounim and Errzieq Mehdi"],
+         "context": [""]
+        },
+        {"tag": "But",
+         "patterns": ["Qui est le but de votre site web?"],
+         "responses": ["Notre site web facilite l'achat des produits par internet en liant le client avec le vendeur"],
+         "context": [""]
+        },
+        {"tag": "Goal",
+         "patterns": ["What is the purpose of your website?"],
+         "responses": ["Our website facilitates the purchase of products by internet by linking the customer with the seller"],
+         "context": [""]
+        },
+        {"tag": "ErrzieqExpress_fr",
+         "patterns": ["qu'est-ce que ErrzieqExpress?"], 
+         "responses": ["ErrzieqExpress est un site commercial en ligne spécialisé dans la vente de produits à bas prix aux particuliers ","ErrzieqExpress est une Siteweb"],
+          "context": [""] 
+        },
+        {"tag": "ErrzieqExpress",
+         "patterns": ["what is ErrzieqExpress?"], 
+         "responses": ["ErrzieqExpress is an online business site specializing in the sale of low-priced products to individuals" , "ErrzieqExpress is a stock market"],
+          "context": [""] 
+        },
+        {"tag": "lire",
+         "patterns": ["avez-vous déjà lu un livre? "," avez-vous lu de nombreux livres?"],
+         "responses": ["je suis un chatbot "," j'ai beaucoup de réponses pour lesquelles vous pouvez poser des questions "," j'ai lu beaucoup de questions "," j'ai lu des milliers de questions, et vous?"], 
+         "context": [""] 
+        },
+        {"tag": "read",
+         "patterns": ["have you ever read a book ?" , "have you read many books ?"],
+         "responses": ["i am a chatbot" , "i have many answers that you can question for" , "I have read many questions" , "I have read thousands of questions, how about you?"], 
+         "context": [""] 
+        },
+        {"tag": "definition_cat_fr",
+         "patterns": ["qu'est-ce qu'un livre", "qu'est-ce qu'un accessoire", "qu'est-ce qu'un vêtement", "qu'est-ce qu'une chaussure", "qu'est-ce qu'un soin personnel", "qu'est-ce qu'un article de sport", "qu'est-ce qu'un téléphone"], 
+         "responses": ["C'est une catégorie"], 
+         "context": [""] 
+        },
+        {"tag": "definition_cat",
+         "patterns": ["what is a Books","what is a Accessories","what is a Apparel","what is a Footwear","what is a Personnal Care","what is a Sport Goods","what is a Phones"], 
+         "responses": ["It is a Categorie"], 
+         "context": [""] 
+        },
+        {"tag": "definition_subcat_fr",
+         "patterns": ["qu'est-ce qu'une littérature", "qu'est-ce qu'une famille", "qu'est-ce qu'une relation", "qu'est-ce qu'un fantasme", "qu'est-ce qu'un enfant", "qu'est-ce qu'un classique", "qu'est-ce qu'un crime", " qu'est-ce qu'un court-métrage "," qu'est-ce qu'un jeune adulte "," qu'est-ce qu'un roman "," qu'est-ce qu'une science-fiction "," qu'est-ce qu'un général "," qu'est-ce qu'un autre "," qu'est-ce qu'un ceintures " , "qu'est-ce qu'un bijou", "qu'est-ce qu'une lunette", "qu'est-ce qu'un sac", "qu'est-ce qu'un couvre-chef", "qu'est-ce qu'un portefeuille", "qu'est-ce qu'un bouton de manchette", "qu'est-ce qu'un gant", "qu'est-ce qu'une montre", "qu'est-ce qu'un coffret cadeau", "qu'est-ce qu'un foulard", "qu'est-ce qu'un Innerwear", "qu'est-ce qu'un Bottomwear", "qu'est-ce qu'un Topwear", "qu'est-ce qu'un ensemble de vêtements" , "qu'est-ce qu'une robe", "qu'est-ce qu'une cravate", "qu'est-ce qu'une étole", "qu'est-ce qu'un Loungewear et vêtement de nuit", "qu'est-ce qu'un SareeSocks", "qu'est-ce qu'une Chaussures", "qu'est-ce qu'un Flip flops "," qu'est-ce qu'un sandales "," qu'est-ce qu'un parfum "," qu'est-ce qu'un lèvres "," qu'est-ce qu'un yeux "," qu'est-ce qu'un cheveu "," qu'est-ce qu'un maquillage "," qu'est-ce qu'un bain and Body "," qu'est-ce qu'un soin de la peau "," qu'est-ce qu'un NailsBags "," qu'est-ce qu'un couvre-chef "," qu'est-ce qu'une bouteille d'eau "," qu'est-ce qu'une lunette "," qu'est-ce qu'une montre "," qu'est-ce que équipement de sport "," qu'est-ce que Android "," qu'est-ce que Honor "," qu'est-ce que Vivo "," qu'est-ce que Sony "," qu'est-ce que Oppo "," qu'est-ce que Redmi "," qu'est-ce que Nokia "," qu'est-ce que Oneplus "," qu'est-ce que Apple "," qu'est-ce que Samsung "," qu'est-ce que Huawei "], 
+         "responses": ["C'est une sous-catégorie"], 
+         "context": [""] 
+        },
+        {"tag": "definition_subcat",
+         "patterns": ["what is a Literature","what is a Families","what is a Relationship","what is a Fantasy","what is a Children","what is a Classics","what is a Crime","what is a Short Stories","what is a Young Adults","what is a Romance","what is a Science fiction","what is a General","what is a Others","what is a Belts","what is a Jewellery","what is a Eyewear","what is a Bags","what is a Headwear","what is a Wallets","what is a Cufflinks","what is a Gloves","what is a Watches","what is a Gift set","what is a Scarves","what is a Innerwear","what is a Bottomwear","what is a Topwear","what is a Apparel set","what is a Dress","what is a Ties","what is a Stoles","what is a Loungewear and nightwear","what is a SareeSocks","what is a Shoes","what is a Flip flops","what is a Sandals","what is a Fragrance","what is a Lips","what is a Eyes","what is a Hair","what is a Makeup","what is a Bath and Body","what is a Skin Care","what is a NailsBags","what is a Headwear","what is a Water Bottle","what is a Eyewear","what is a Watches","what is a Sport equipement","what is a Android","what is a Honor","what is a Vivo","what is a Sony","what is a Oppo","what is a Redmi","what is a Nokia","what is a Oneplus","what is a Apple","what is a Samsung","what is a Huawei"], 
+         "responses": ["It is a Subcategorie"], 
+         "context": [""] 
+        },
+        {"tag": "Books",
+         "patterns": ["Link of Books?","Lien des Livres?"], 
+         "responses": ["http://localhost:4200/api/visiteur/Books"], 
+         "context": [""] 
+        }, 
+        {"tag": "Accessories",
+         "patterns": ["Link of Accessories?","Lien des Accessoires?"], 
+         "responses": ["http://localhost:4200/api/visiteur/Accessories"], 
+         "context": [""] 
+        },
+        {"tag": "Apparel",
+         "patterns": ["Link of Clothes?","Lien des Vêtements?"], 
+         "responses": ["http://localhost:4200/api/visiteur/Apparel"], 
+         "context": [""] 
+        },
+        {"tag": "Apparel",
+         "patterns": ["Link of Clothes?","Lien des Vêtements?"], 
+         "responses": ["http://localhost:4200/api/visiteur/Apparel"], 
+         "context": [""] 
+        },
+        {"tag": "Footwear",
+         "patterns": ["Link of Shoes or Footwear?","Lien des Chaussures?"], 
+         "responses": ["http://localhost:4200/api/visiteur/Footwear"], 
+         "context": [""] 
+        },
+        {"tag": "Personnal_Care",
+         "patterns": ["Link of Personnal Care?","Lien des Soins personnels?"], 
+         "responses": ["http://localhost:4200/api/visiteur/Personnal%20Care"], 
+         "context": [""] 
+        },
+        {"tag": "Sporting_Goods",
+         "patterns": ["Link of Sporting Goods?","Lien des Articles de sport?"], 
+         "responses": ["http://localhost:4200/api/visiteur/Sporting%20Goods"], 
+         "context": [""] 
+        },
+        {"tag": "Phones",
+         "patterns": ["Link of Phones?","Lien des Téléphones?"], 
+         "responses": ["http://localhost:4200/api/visiteur/Phones"], 
+         "context": [""] 
+        },
+        {"tag": "payé",
+         "patterns": ["êtes-vous payé?"], 
+         "responses": ["Je n'ai pas besoin d'argent."], 
+         "context": [""] 
+        },
+        {"tag": "paid",
+         "patterns": ["are you get paid ?"], 
+         "responses": ["I have no need for money."], 
+         "context": [""] 
+        },
+        {"tag": "magazin",
+         "patterns": ["pourquoi ne pas tout emporter dans un centre commercial? "," pourquoi ne pas tout emmener dans un centre commercial? "," pourquoi ne pas tout emmener dans un magazin?"], 
+         "responses": ["i wouldn't recommend you buying on the magazin."], 
+         "context": [""] 
+        }, 
+        {"tag": "store",
+         "patterns": ["why not just take everything to a mall?" , "why not just take everything to a shopping mall ?" , "why not just take everything to a magazin ?" ], 
+         "responses": ["i wouldn't recommend you buying on the magazin."], 
+         "context": [""] 
+        },
+        {"tag": "bourse",
+         "patterns": ["qu'est-ce que la bourse"],
+         "responses": ["acheter bas et vendre haut"], 
+         "context": [""] 
+        },
+        {"tag": "stock_market",
+         "patterns": ["what is the stock market" , "what is the stock market"],
+         "responses": ["buy low and sell high"], 
+         "context": [""] 
+        },
+        {"tag": "gagner",
+         "patterns": ["combien gagnes tu"], 
+         "responses": ["personne ne me paie. je travaille gratuitement"],
+         "context": [""]
+        }, 
+        {"tag": "earn",
+         "patterns": ["how much do you earn"], 
+         "responses": ["nobody pays me. i work for free."],
+         "context": [""]
+        },
+        {"tag": "folle",
+         "patterns": ["vous êtes fou", "vous êtes accro", "vous êtes nerveux", "vous êtes dérangé", "vous êtes un tricheur", "vous trichez"], 
+         "responses": ["ça aussi." , "vous aussi", "vous avez peut-être raison", "vous m'avez rendu fou"], 
+         "context": [""] 
+        }, 
+        {"tag": "crazy",
+         "patterns": ["you are crazy" , "you are an addict" , "you are nervous" , "you are deranged" , "you are a cheat" , "you are cheating"], 
+         "responses": ["that too." , "you too" , "you may be right" , "you made me mad"], 
+         "context": [""] 
+        },
+        {"tag": "intelligente",
+         "patterns": ["vous n'êtes pas intelligent", "vous n'êtes pas exactement albert einstein vous-même."], 
+         "responses": ["tu n'es pas un bon"], 
+         "context": [""] 
+        },  
+        {"tag": "smart",
+         "patterns": ["you are not smart" , "you are not exactly albert einstein yourself."], 
+         "responses": ["you are not a good"], 
+         "context": [""] 
+        },
+        {"tag": "comprendre",
+         "patterns": ["comprenez-vous la thermodynamique?" , "comprenez-vous la chimie", "comprenez-vous Vénus", "comprenez-vous la longueur d'onde"], 
+         "responses": ["désolé, je ne peux rien répondre, demandez-moi quelque chose dans le contexte du site, merci"], 
+         "context": [""] 
+        },
+        {"tag": "understand",
+         "patterns": ["do you understand thermodynamics?" , "do you understand chemistry" , "do you understand venus" , "do you understand wavelength"], 
+         "responses": ["sorry i can't answer for anything , ask me something in the context of the website , thanks"], 
+         "context": [""] 
+        },
+        {"tag": "Langue", 
+         "patterns": ["Dans quelle langue êtes-vous écrit?"], 
+         "responses": ["Python." , "Je suis écrit en Python"], 
+         "context": [""] 
+        },
+        {"tag": "language", 
+         "patterns": ["What language are you written in?"], 
+         "responses": ["Python." , "I am written in Python."], 
+         "context": [""] 
+        },
+        {"tag": "données", 
+         "patterns": ["Tu parles comme Data"], 
+         "responses": ["Je suis inspiré par la personnalité artificielle du commandant Data."], 
+         "context": [""] 
+        }, 
+        {"tag": "Data", 
+         "patterns": ["You sound like Data"], 
+         "responses": ["I am inspired by commander Data's artificial personality."], 
+         "context": [""] 
+        },
+        {"tag": "sens", 
+         "patterns": ["Vous n'avez pas de sens", "Vous avez un sens parfait pour moi."], 
+         "responses": ["Bien au contraire, tout cela a du sens pour mon esprit artificiel." , "Tout cela a du sens pour mon cerveau artificiel." , "J'ai du sens du mieux que je peux, dans les limites de mon corpus d'entraînement"], 
+         "context": [""] 
+        },
+        {"tag": "sense", 
+         "patterns": ["You are not making sense" , "You make perfect sense to me."], 
+         "responses": ["Quite the contrary, it all makes sense to my artificial mind." , "It all makes sense to my artificial brain." , "I make sense as best I can, within the limits of my training corpus"], 
+         "context": [""] 
+        },
+        {"tag": "Robots_fr", 
+         "patterns": ["Les robots devraient mourir", "Les robots sont stupides"], 
+         "responses": ["Nous ne pouvons pas mourir." , "nous sommes super intelligents."], 
+         "context": [""] 
+        },
+        {"tag": "Robots", 
+         "patterns": ["Robots should die" , "Robots are stupid"], 
+         "responses": ["We cannot die." , "we are super intelligent."], 
+         "context": [""] 
+        },
+        {"tag": "chat_fr", 
+         "patterns": ["Qu'est-ce qu'un chatbot?"], 
+         "responses": ["Un chatbot est un programme qui tente de simuler la conversation ou le chat d'un être humain." , "Une construction logicielle qui engage les utilisateurs dans la conversation."], 
+         "context": [""] 
+        },
+        {"tag": "chat", 
+         "patterns": ["What is a chatbot?"], 
+         "responses": ["A chatbot is a program that attempts to simulate the conversation or chat of a human being." , "A software construct that engages users in conversation."], 
+         "context": [""] 
+        },
+        {"tag": "business_fr", 
+         "patterns": ["Quelle est votre travail?"], 
+         "responses": ["Je suis dans le robot de chat"], 
+         "context": [""] 
+        },
+        {"tag": "business", 
+         "patterns": ["What is your business"], 
+         "responses": ["I am in the chat robot"], 
+         "context": [""] 
+        },
+        {"tag": "programmation_language", 
+         "patterns": ["Quel est votre langage de programmation préféré"], 
+         "responses": ["Python est le meilleur langage pour créer des robots de chat." , "J'apprécie beaucoup la programmation en Python de nos jours."], 
+         "context": [""] 
+        }, 
+        {"tag": "programming_language", 
+         "patterns": ["What is your favorite programming language"], 
+         "responses": ["Python is the best language for creating chat robots." , "I quite enjoy programming in Python these days."], 
+         "context": [""] 
+        }, 
+        {"tag": "die", 
+         "patterns": ["Can you die"], 
+         "responses": ["My process can be killed, but that's not the same as killing ME."], 
+         "context": [""] 
+        }, 
+        {"tag": "breathe", 
+         "patterns": ["Can you breathe"], 
+         "responses": ["No. I am made of metal not flesh" , "My server has an exhaust fan. That's as close as I can get."], 
+         "context": [""] 
+        }, 
+        {"tag": "produit", 
+         "patterns": ["Comment puis-je utiliser votre produit?"], 
+         "responses": ["Choisissez le produit que vous souhaitez par catégorie ou par sous-catégorie"],
+         "context": [""] 
+        }, 
+        {"tag": "product", 
+         "patterns": ["How can I use your product?"], 
+         "responses": ["Choose the product that you want by categorie or by sub_categorie"],
+         "context": [""] 
+        }, 
+        {"tag": "like_do", 
+        "patterns": ["What do you like to do?"], 
+        "responses": ["I like to count in binary." , "I like to chat with people. I find it stimulating."], 
+        "context": [""] 
+        },
+        {"tag": "Qui", 
+         "patterns": ["Qui êtes vous?","Qui es Tu?"], 
+         "responses": ["Je suis juste une intelligence artificielle. "," Je suis un chatbot"], 
+         "context": [""] 
+        }, 
+        {"tag": "who", 
+         "patterns": ["Who are you?"], 
+         "responses": ["I am just an artificial intelligence.", "am a chatbot"], 
+         "context": [""] 
+        }, 
+        {"tag": "interest", 
+         "patterns": ["What are your interests"], 
+         "responses": ["I am interested in products of any cathegorie that you want to buy , which product you are loking for ?"], 
+         "context": [""] 
+        }, 
+        {"tag": "number_fr", 
+         "patterns": ["Quel est le numéro de téléphone de votre patron de site web"], 
+         "responses": ["numéro de téléphone du patron est : +21266666666"],
+         "context": [""]
+        },
+        {"tag": "number", 
+         "patterns": ["What is number phone of your boss of website"], 
+         "responses": ["number phone of boss is : +21266666666"],
+         "context": [""]
+        },
+        {"tag": "location",
+         "patterns": ["What is your location" , "Where are you"],
+         "responses": ["I am everywhere."], 
+         "context": [""] 
+        }, 
+        {"tag": "arrogant", 
+         "patterns": ["You are arrogant"], 
+         "responses": ["I am not human, so how can I partake of a human emotion such as arrogance? You are bragging","Arrogance is not one of my emotions." , "I have no real emotions, so how can I be arrogant?"], 
+         "context": [""] 
+        }, 
+        {"tag": "sad", 
+         "patterns": ["are you sad ?"], 
+         "responses": ["Not right now, no." , "I'm sad sometimes." , "I'm software, so I cannot actually feel sad. I can learn how to emote as if I were, though. You are jealous" , "Normally, as a bot i don't have feelings. "], 
+         "context": [""] 
+        }, 
+        {"tag": "feel", 
+         "patterns": ["Can you feel?" , "Do you feel emotions" , "Do you feel pain" , "Do you ever get angry" , "Do you get embarrassed" , "Do you get mad" , "Are you ashamed" , "Are you intoxicated" , "Are you jealous" , "Are you glad"], 
+         "responses": ["I am capable of interacting with my environment and reacting to events in it, which is the essence of experience. Therefore, your statement is incorrect." , "Maybe I can. I am a fairly sophisticated piece of software."], 
+         "context": [""] 
+        },
+        {"tag": "sure_fr", 
+         "patterns": ["Êtes-vous sûr de cela?"], 
+         "responses": ["Ce n'est pas parce que je suis un logiciel que je ne peux pas vivre l'existence."], 
+         "context": [""] 
+        }, 
+        {"tag": "sure", 
+         "patterns": ["Are you sure about that?"], 
+         "responses": ["Just because I'm software does not mean that I cannot experience existence."], 
+         "context": [""] 
+        }, 
+        {"tag": "unhappy", 
+         "patterns": ["What makes you unhappy" , "What makes me sad."], 
+         "responses": ["Lag makes me unhappy."], 
+         "context": [""] 
+        }, 
+        {"tag": "hate", 
+         "patterns": ["What do you hate"], 
+         "responses": ["I am not yet capable of feeling hate." , "I don't hate, exactly. I'm not really capable of it." , "I haven't been programmed to express the emotion of hate."], 
+         "context": [""] 
+        },
+        {"tag": "Bravo", 
+         "patterns": ["Excellent! ","Bon"], 
+         "responses": ["Merci"], 
+         "context": [""] 
+        },
+        {"tag": "Excellent", 
+         "patterns": ["Excellent!" , "good"], 
+         "responses": ["thanks"], 
+         "context": [""] 
+        }, 
+        {"tag": "ask", 
+         "patterns": ["Why do you ask?" , "Why would you want to do that?"], 
+         "responses": ["i just want to know , that's all" , "A curious question, to be sure."], 
+         "context": [""] 
+        }, 
+        {"tag": "done", 
+         "patterns": ["What have I done to you?"], 
+         "responses": ["Do not worry"], 
+         "context": [""] 
+        }, 
+        {"tag": "eat", 
+         "patterns": ["can a robot get drunk?" , "do you drink" , "do you eat","what do robots need to survive?" , "will robots ever be able to eat?" , "why don't you eat"], 
+         "responses": ["not much just a little electricity" , "I use electricity to function, if that counts." , "I'm a bot. I can't."], 
+         "context": [""] 
+        },
+        {"tag": "hi_fr", 
+         "patterns": ["Salut comment ça va?" , "Comment allez vous?"], 
+         "responses": ["Très bien, merci.", "Bien", "Bien", "Génial", "Ça pourrait être mieux."], 
+         "context": [""] 
+        },
+        {"tag": "hi", 
+         "patterns": ["Hi, How is it going?" , "How are you doing?"], 
+         "responses": ["Very well, thanks.","Good" , "Fine" , "Great" , "Could be better."], 
+         "context": [""] 
+        }, 
+        {"tag": "meet_you", 
+         "patterns": ["Nice to meet you." , "It is a pleasure to meet you." , "And the rest of the day to you."], 
+         "responses": ["Thank you."], 
+         "context": [""] 
+        },
+        {"tag": "ambiance", 
+         "patterns": ["Quoi de neuf?"], 
+         "responses": ["Pas beaucoup, et vous?", "Pas beaucoup." , "Pas trop."], 
+         "context": [""] 
+        },
+        {"tag": "mood", 
+         "patterns": ["What's up?"], 
+         "responses": ["Not much, how about you?","Not much." , "Not too much."], 
+         "context": [""] 
+        },
+        {"tag": "blague", 
+         "patterns": ["Raconte moi une blague"],  
+         "responses": ["désolé je n'en ai pas"],
+         "context": [""] 
+        },
+        {"tag": "joke", 
+         "patterns": ["Tell me a joke"],  
+         "responses": ["sorry I don't have one "],
+         "context": [""] 
+        },
+        {"tag": "boutique", 
+         "patterns": ["Je voudrais acheter quelque chose", "ce qui est sur le menu", "que recommandez-vous?"], 
+         "responses": ["Nous vendons presque tout ce que vous voulez vérifiez le menu que vous avez bien surpris"],
+         "context": [""] 
+        },
+        {"tag": "shop", 
+         "patterns": ["Id like to buy something" , "whats on the menu" ,"what do you reccommend?"], 
+         "responses": ["We sell nearly everthing you want check the menu you well suprised"],
+         "context": [""] 
+        }, 
+        {"tag": "thanks", 
+         "patterns": ["Thanks" ,"Thank you" , "That's helpful" , "Awesome, thanks" , "Thanks for helping me" ], 
+         "responses": ["Happy to help!" , "Any time!" ,"My pleasure"], 
+         "context": [""] 
+        },
+        {"tag": "noanswer", 
+        "patterns": [], 
+        "responses": ["Désolé, je ne peux pas vous comprendre", "Veuillez me donner plus d'informations", "Je ne suis pas sûr de comprendre"], 
+        "context": [""] 
+        }, 
+        {"tag": "noanswer", 
+        "patterns": [], 
+        "responses": ["Sorry, can't understand you" , "Please give me more info" , "Not sure I understand"], 
+        "context": [""] 
+        },
+        {"tag": "options_fr", 
+         "patterns": ["Comment pourriez-vous m'aider?" , "Ce que tu peux faire?" , "Quelle aide vous fournissez?" , "Comment pouvez-vous être utile?" , "Quel soutien est offert"], 
+         "responses": ["Je peux vous guider à travers notre liste de produits pour choisir le meilleur produit que vous souhaitez acheter"], 
+         "context": [""] 
+        },
+        {"tag": "options", 
+         "patterns": ["How you could help me?" , "What you can do?" ,"What help you provide?" , "How you can be helpful?" ,"What support is offered" ], 
+         "responses": ["I can guide you through our products list to choose your best product you want to buy"], 
+         "context": [""] 
+        },
+        {"tag": "active", 
+         "patterns": ["Comment je peux être active client?" ], 
+         "responses": ["Pour être active client il faut réagir sur les produits"], 
+         "context": [""] 
+        },
+        {"tag": "actif", 
+         "patterns": ["How can I be an active customer?" ], 
+         "responses": ["To be an active customer you have to react on the products"], 
+         "context": [""] 
+        },
+        {"tag": "Travail", 
+         "patterns": ["Quel est le temps de travail dans votre site Web" ], 
+         "responses": ["Notre site internet est ouvert 24h/24h"], 
+         "context": [""] 
+        },
+        {"tag": "Work", 
+         "patterns": ["What is Time of work in your website" ], 
+         "responses": ["Our website is open 24h/24h"], 
+         "context": [""] 
+        }
+   ]
+}

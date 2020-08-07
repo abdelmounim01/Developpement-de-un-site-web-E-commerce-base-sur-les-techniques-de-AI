@@ -1,0 +1,76 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- jQuery UI -->
+<link href="https://code.jquery.com/ui/1.10.3/themes/redmond/jquery-ui.css" rel="stylesheet" media="screen">
+
+    <!-- Bootstrap -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+	<!-- styles -->
+	
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+<ngbd-dropdown-navbar></ngbd-dropdown-navbar>
+<table style="margin-top: 20px; margin-left: 50px;">
+    <tr>
+    <td>
+      <a href="/"><td>
+        <img src="assets/images/Header/HollywoodExpress.png" style="width: 300px; height: 130px;">
+   </td></a>
+    </td>
+    </tr>
+</table>
+
+<div class="page-content"  >
+    <div class="row" >
+      <div class="col-md-2" >
+		  <div class="sidebar content-box" style="display: block;" style="background-color: rgba(52, 152, 252, 0.1);">
+			<div ng-sidebar-content style="text-align: center;" >
+				<button (click)="_toggleSidebar()" style="background-color: rgba(52, 152, 252, 0.1);border-radius: 50%;"><i class="fa fa-bars"></i></button>
+			</div>
+			<br>
+			<ng-sidebar-container style="height: 25vh;">
+				
+		   <ng-sidebar [(opened)]="_opened" position="right">
+			<ul class="nav">
+				
+                <!-- Main menu -->
+                <li><a class="nav-link" routerLink="app-dashboard"><i class="fa fa-fw fa-home"></i> Dashboard</a></li>
+                <li><a class="nav-link" routerLink="app-charts"><i class="fa fa-signal" aria-hidden="true"></i> Statistics</a></li>
+				<li><a class="nav-link" routerLink="app-products"><i class="fa fa-table" aria-hidden="true"></i> Products Table</a></li>
+			</ul>
+			</ng-sidebar>
+		    </ng-sidebar-container>
+         </div>
+	  </div>
+	  <div class="col-md-10">
+		<router-outlet></router-outlet>
+	  </div>
+	  
+	</div>
+	<div >
+		<app-footer></app-footer>
+	</div>
+</div>
+
+      <link href="https:////cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" media="screen">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <!-- jQuery UI -->
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap.min.js"></script>
+

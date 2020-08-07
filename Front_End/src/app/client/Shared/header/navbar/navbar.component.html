@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-md navbar navbar-dark bg-dark">
+    <div class="navbar-collapse" [class.collapse]="collapsed" id="navbarContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item" ngbDropdown>
+          <a class="nav-link" style="cursor: pointer" ngbDropdownToggle id="navbarDropdown1" role="button">
+            English
+          </a>
+          <div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu">
+            <a ngbDropdownItem href="#" (click)="$event.preventDefault()">English</a>
+            <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Spanish</a>
+            <a ngbDropdownItem href="#" (click)="$event.preventDefault()"> Fransh </a>
+            <a ngbDropdownItem href="#" (click)="$event.preventDefault()">العربية</a>
+          </div>
+        </li>
+  
+        <li class="nav-item" ngbDropdown>
+          <a class="nav-link" style="cursor: pointer" ngbDropdownToggle id="navbarDropdown2" role="button">
+            {{message}}
+          </a>
+          <div ngbDropdownMenu aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-right" style="cursor:pointer">
+            <a ngbDropdownItem (click)="newMessageDollar()"> <i class="fas fa-dollar-sign"></i>  US Dollar  </a>
+            <a ngbDropdownItem (click)="newMessageDH()"><i class="fab fa-gg"></i> MAD </a>
+            <a ngbDropdownItem (click)="newMessageEuro()"><i class="fas fa-euro-sign"></i> Euro  </a>
+          </div>
+        </li>
+  
+        <li class="nav-item" ngbDropdown display="dynamic" placement="bottom-right">
+          <a class="nav-link" style="cursor: pointer" ngbDropdownToggle id="navbarDropdown3" role="button">
+            <!--Drop-down-form-->
+                  Account 
+                    <div ngbDropdownMenu aria-labelledby="navbarDropdown3">
+                      
+     
+                      
+                      <div class="dropdown-divider"></div>
+                      <button ngbDropdownItem onclick="window.location.href='/Home'">Accueil <i class="far fa-newspaper" style='font-size:16px'></i></button>
+                      <button ngbDropdownItem onclick="window.location.href='/app-profil'">{{user.firstname}} <i class="fas fa-home" style='font-size:16px'></i></button>
+                      <button ngbDropdownItem onclick="window.location.href='/app-profil/app-panier'">Panier <i style='font-size:16px' class='fas'>&#xf07a;</i></button>
+                      <button ngbDropdownItem onclick="window.location.href='/app-profil/app-liked'">Historique Likes <i style='font-size:16px' class='fas'>&#xf164;</i></button>
+                      <button ngbDropdownItem onclick="window.location.href='/app-profil/app-rated'">Historique ratings <i style='font-size:16px' class='fas'>&#xf005;</i></button>
+                      <button ngbDropdownItem onclick="window.location.href='/app-profil/app-settings'">settings <i class="fas fa-cogs" style='font-size:16px'></i></button>
+                      <button ngbDropdownItem (click)="logout()">Se Déconnecter <i class="fas fa-sign-out-alt" style='font-size:16px'></i></button>
+                      </div>
+                      
+                      
+                      
+            <!---->
+          </a>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link " onclick="window.location.href='/app-chatbot'" style="cursor: pointer" id="navbarDropdown3" role="button">
+            About
+          </a>
+        </li>
+      </ul>
+    </div>
+    &nbsp;&nbsp;<img class="rounded-circle" src="assets/images/upload/{{user.image}}" alt="User" width="35" style="float:right">
+  </nav>

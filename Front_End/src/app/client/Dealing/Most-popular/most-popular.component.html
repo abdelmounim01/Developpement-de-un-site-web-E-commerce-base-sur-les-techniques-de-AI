@@ -1,0 +1,30 @@
+<div class="edit ">
+    <h2>Most Popular</h2>
+
+    <ngx-slick-carousel class="carousel" 
+                        #slickModal="slick-carousel" 
+                        [config]="slideConfig" 
+                        >
+
+        <div ngxSlickItem *ngFor="let task of tasks" style="float: left">
+            <div class="card" >
+                <a href="/product/{{task.produitId}}">
+                    <img src="{{task.Product_img}}" alt="">
+                </a>
+                <!--we suppose that the price in database is in DH-->
+                <div *ngIf="message == 'DH'">
+                    <p class="price" >{{task.Product_price}}MAD</p>
+               </div>
+               <div *ngIf="message == 'Euro'">
+                    <p class="price"> {{task.Product_price * 0.093 | number:'0.0-2'}}€ </p>
+               </div>
+               <div *ngIf="message == 'Dollar'">
+                    <p class="price"> {{task.Product_price * 0.10 | number:'0.0-2'}}$</p>
+               </div>
+                    <h5>{{task.Product_name}}</h5>
+                     
+             </div>
+        </div>
+    </ngx-slick-carousel>
+</div>
+

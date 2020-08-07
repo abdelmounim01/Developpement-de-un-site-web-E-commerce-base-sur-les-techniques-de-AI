@@ -1,0 +1,7 @@
+<ul  class="list-group list-group-flush" *ngFor = "let meta of metauser" >
+  
+    <li id="meta.produitId" class="list-group-item" *ngIf="(meta.panier == 1)" >
+      <span >{{meta.username}} ajouter dans la panier <a href="/product/{{meta.produitId}}"><strong class="text-muted d-block mb-2">{{meta.Product_name}}</strong></a> </span>
+      <i class="fas fa-trash-alt" style="cursor: pointer" (click)="deletepanier(meta.produitId) " (click)="deleteSelf(meta)"></i>
+    </li>
+</ul>

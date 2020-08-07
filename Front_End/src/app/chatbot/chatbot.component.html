@@ -1,0 +1,18 @@
+<div style=" background-size: cover; background-image: url('https://miro.medium.com/max/3000/1*iGdFJTHMIG79N2HChWaooQ.gif');height:870px">
+<nav class="navbar navbar-expand-md navbar navbar-dark bg-dark">
+    <header><h3 style="text-align: center; color: white;border-radius: 20px ; margin-left: 150px;">I'm Chatbot Of your WebSite ! how can I help you?</h3></header><br>
+</nav>
+
+
+        <input #taskTitle type="text" id="msg" style="text-align: center; margin-left: 200px; margin-right:10px; margin-top: 50px; width: 50% ; height: 50px ; border-radius: 20px ;"  name="msg" placeholder="Message" />
+        <input type="button" value="Click me" (click)="message(taskTitle.value)"  class="btn btn-accent btn-outline-primary">
+        
+        
+        
+        
+        
+    <h2 style="margin-left: 220px; margin-top: 45px;">Response</h2>
+    <div  class="scroll" style=" background-color: lightblue; overflow: auto; height: 40%; margin-left: 50px;  width: 50%; background-color: rgba(0, 0, 0, 0.3); border-radius: 30px" >
+        <h4 style="color: blanchedalmond; margin: 15px;">{{reponse.response}}</h4>
+    </div>
+</div>

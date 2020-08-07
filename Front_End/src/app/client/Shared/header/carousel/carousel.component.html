@@ -1,0 +1,25 @@
+<ngb-carousel *ngIf="images">
+    <ng-template ngbSlide>
+        <img [src]="images[0]" alt="Random first slide">
+      <div class="carousel-caption">
+        <h3>Men's and women's Sports Shoes</h3>
+        <p>Puma  , ADIDAS , Reebok , Nike and more .. </p>
+      </div>
+    </ng-template>
+  
+    <ng-template ngbSlide>
+        <img [src]="images[1]" alt="Random second slide">
+      <div class="carousel-caption">
+        <h3>Phones</h3>
+        <p>Samsung , Iphone , Laptops and more ..</p>
+      </div>
+    </ng-template>
+  
+    <ng-template ngbSlide>
+        <img [src]="images[2]" alt="Random third slide">
+      <div class="carousel-caption">
+        <h3>The best watches</h3>
+        <p>with our plateform you can choose between hundreds of watches.</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>

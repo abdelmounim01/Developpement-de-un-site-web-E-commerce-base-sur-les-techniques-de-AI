@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"PFE.metauser"}],"uuid":"3ab24fc751954dd6a07636dc89fc3369"}

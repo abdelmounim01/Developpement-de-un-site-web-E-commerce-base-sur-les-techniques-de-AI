@@ -1,0 +1,154 @@
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<app-navbar-visiteur></app-navbar-visiteur>
+
+<app-search-form-visiteur></app-search-form-visiteur>
+
+
+<div class="backGroundSite">
+
+<div class="row">
+    <div class="col-md-11" style="background-color: white;margin-top: 20px; margin-left: 30px;"> 
+       <div class="edit" *ngFor="let task of tasks">
+         <div *ngIf="task.produitId == id">
+
+          <table style="width: 40%; float: left;" >
+            <tr>
+              <td>
+                <lib-ngx-image-zoom
+                [thumbImage]="task.Product_img"
+                [zoomMode]="'hover'"
+                [magnification]="1"
+                [enableScrollZoom]="true"
+                [enableLens]="true"
+                [lensWidth]="200">
+             </lib-ngx-image-zoom>
+              </td>
+              
+            </tr><br>
+            <tr align="center" style="cursor:pointer">
+              <button  type="button" (click)="Alert()" class="btn btn-dark btn-lg btn-block">Panier</button>
+            </tr>
+
+            <tr align="center" style="cursor:pointer">
+              
+              <fa-icon [icon]="[starChangeOne, 'star']" (click)="Alert()" style="font-size: 1em;"></fa-icon>&nbsp;&nbsp;
+              <fa-icon [icon]="[starChangeTwo, 'star']" (click)="Alert()" style="font-size: 1.2em;"></fa-icon>&nbsp;&nbsp;
+              <fa-icon [icon]="[starChangeThree, 'star']" (click)="Alert()" style="font-size: 1.4em;"></fa-icon>&nbsp;&nbsp;
+              <fa-icon [icon]="[starChangeFour, 'star']" (click)="Alert()" style="font-size: 1.6em;"></fa-icon>&nbsp;&nbsp;
+              <fa-icon [icon]="[starChangeFive, 'star']" (click)="Alert()" style="font-size: 1.8em;"></fa-icon>&nbsp;&nbsp;
+              
+              
+            </tr>
+            <tr align="center" style="cursor:pointer">
+              <!-- ['fas', 'heart'] is an array that indicates the [prefix, iconName] -->
+              <fa-icon [icon]="[heartChange, 'heart']" (click)="Alert()" style="font-size: 3em;"></fa-icon>
+            </tr>
+            
+            <tr align="center"><h1>Price : 
+
+
+              <!--we suppose that the price in database is in DH-->
+                              <div *ngIf="message == 'DH'">
+                                <p class="price" >{{task.Product_price}} MAD</p>
+                              </div>
+                              <div *ngIf="message == 'Euro'">
+                                <p class="price"> {{task.Product_price * 0.093 | number:'0.0-2'}} € </p>
+                              </div>
+                              <div *ngIf="message == 'Dollar'">
+                                <p class="price"> {{task.Product_price * 0.10 | number:'0.0-2'}} $</p>
+                              </div>     
+                            
+                          </h1></tr><br>
+          </table>
+          <div style="margin-top: 80px;">
+            <h3>Name : {{task.Product_name}}</h3><br>
+            <h5>Description : {{task.description}}</h5><br>
+            <h5>Color : {{task.baseColor}}</h5><br>
+            <h5>Gender : {{task.gender}}</h5><br>
+            <h5>Categorie : {{task.Categories}}</h5><br>
+            <h5>SubCategorie : {{task.subCategory}}</h5><br>
+          </div>
+
+
+         
+
+          
+
+
+
+      </div>
+  </div>
+  <div style=" position: absolute; bottom: 0 ; right:0; margin-right: 10px;">
+  <h5>contact us : {{user.email}}</h5>
+  <h5>Our name : {{user.firstname}} {{user.lastname}}</h5>
+  <h5>Our Number Phone : {{user.num_phone}}</h5>
+ </div> 
+</div>
+
+</div>
+<br>
+<br>
+
+</div>
+<br>
+<div class="edit ">
+  <h2>Similiar Products</h2>
+
+  <ngx-slick-carousel class="carousel" 
+                      #slickModal="slick-carousel" 
+                      [config]="slideConfig" 
+                      >
+
+      <div ngxSlickItem *ngFor="let similiar of similiar " style="float: left">
+        <div class="card" >
+              <a href="/product/visiteur/{{similiar.produitId}}">
+                  <img src="{{similiar.Product_img}}" alt="" style="height: 250px;width:100% ;">
+              </a>
+                  
+                <!--we suppose that the price in database is in DH-->
+                <div *ngIf="message == 'DH'">
+                  <p class="price" >{{similiar.Product_price}}MAD</p>
+                </div>
+                <div *ngIf="message == 'Euro'">
+                  <p class="price"> {{similiar.Product_price * 0.093 | number:'0.0-2'}}€ </p>
+                </div>
+                <div *ngIf="message == 'Dollar'">
+                  <p class="price"> {{similiar.Product_price * 0.10 | number:'0.0-2'}}$</p>
+                </div>  
+                <h5>{{similiar.Product_name}}</h5>  
+              </div>               
+      </div>
+  </ngx-slick-carousel>
+</div>
+
+<div class="edit ">
+  <h2>Most Popular</h2>
+
+  <ngx-slick-carousel class="carousel" 
+                      #slickModal="slick-carousel" 
+                      [config]="slideConfig" 
+                      >
+                      
+      <div ngxSlickItem *ngFor="let task of populars" style="float: left">
+          <div class="card" >
+              <a href="/product/visiteur/{{task.produitId}}">
+                  <img src="{{task.Product_img}}" alt="" style="height: 250px;width:100% ;">
+              </a>
+                  
+                  <!--we suppose that the price in database is in DH-->
+                  <div *ngIf="message == 'DH'">
+                      <p class="price" >{{task.Product_price}}MAD</p>
+                  </div>
+                  <div *ngIf="message == 'Euro'">
+                      <p class="price"> {{task.Product_price * 0.093 | number:'0.0-2'}}€ </p>
+                  </div>
+                  <div *ngIf="message == 'Dollar'">
+                      <p class="price"> {{task.Product_price * 0.10 | number:'0.0-2'}}$</p>
+                  </div>  
+                  <h5>{{task.Product_name}}</h5>
+          </div>
+              
+      </div>
+  </ngx-slick-carousel>
+</div>
+<app-footer-visiteur></app-footer-visiteur>

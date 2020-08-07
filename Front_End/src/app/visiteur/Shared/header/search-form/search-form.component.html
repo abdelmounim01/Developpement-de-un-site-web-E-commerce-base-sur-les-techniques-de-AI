@@ -1,0 +1,40 @@
+<table style="margin-top: 20px; margin-left: 50px;">
+    <tr>
+    <a href="/"><td>
+         <img src="assets/images/Header/HollywoodExpress.png" style="width: 300px; height: 130px;">
+    </td></a>
+    <td style="width: 50px;"></td>
+    <td>
+        <form class="form-inline" >
+        <input class="form-control mr-sm-2" #text type="search" id="txt" placeholder="search for a product or category" aria-label="Search" style="width: 500px;">
+        <button class="btn btn-outline-dark my-2 my-sm-0"  (click)="searchproduct(text.value);" type="submit">Search</button>
+        </form><br>
+        <form class="form-inline" [formGroup]="form">
+        <input class=" mr-sm-2" onkeyup='saveValue(this);' id="file" type="file" #fileInput formControlName="file" style="background-color: #000;border-radius: 4rem;color: #fff;cursor: pointer"  ><br>
+        <input type="submit" [disabled]="!form.valid" (click)="image(fileInput.value);" value="Search with image" class="btn btn-accent btn-outline-primary">
+        </form>
+    </td> 
+    </tr>
+</table>
+<div  *ngFor="let task of tasks | paginate: { itemsPerPage: 24, currentPage: p }  " >
+    <div class="col" class="scroll" style="float: left; width:300px ; height: 300px; overflow: auto;   margin:10px ;" >
+        <div class="card" >
+        <a href="/product/visiteur/{{task.produitId}}">
+        <img src="{{task.Product_img}}" alt="" height="200" width="200" style="margin-left: 40px; margin-top: 10px;" >
+        <!--we suppose that the price in database is in DH-->
+        <div *ngIf="message == 'DH'">
+            <p style="font-size: 30px;margin-left: 20%;" class="price" >{{task.Product_price}}MAD</p>
+        </div>
+        <div *ngIf="message == 'Euro'">
+            <p style="font-size: 30px;margin-left: 20%;" class="price"> {{task.Product_price * 0.093 | number:'0.0-2'}}€ </p>
+        </div>
+        <div *ngIf="message == 'Dollar'">
+            <p style="font-size: 30px;margin-left: 20%;" class="price"> {{task.Product_price * 0.10 | number:'0.0-2'}}$</p>
+        </div>  
+        <p style="font-size:16px">{{task.Product_name}}</p>
+    </a>
+    </div>
+</div>
+</div>
+<pagination-controls (pageChange)="p = $event" *ngIf="!isHidden"></pagination-controls>
+    

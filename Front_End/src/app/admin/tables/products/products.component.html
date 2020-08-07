@@ -1,0 +1,102 @@
+<div class="col-md-12 " >
+    <div class="row" class="content-box-large">
+        <div class="col-lg-5">
+            <div class="input-group form">
+                <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="search"/>
+                    
+            </div>
+        </div>
+    
+	<div><br>
+  		<div class="panel-heading">
+			<div class="panel-title">All Products</div>
+		</div>
+  		<div class="panel-body content table-responsive">
+					
+  		<table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered " id="example">
+						<thead>
+							<tr>
+								<th>Name product</th>
+								<th>Category</th>
+								<th>subCategory</th>
+								<th>Description</th>
+								<th>Product price</th>
+								<th>gender</th>
+								<th>baseColor</th>
+								<th>Product_img</th>
+								<th>Delete</th>
+								
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="odd gradeX" *ngFor="let task of tasks | filter:search | paginate:{itemsPerPage : 10 , currentPage:p}" >
+								<td>
+									<a (click)="edit(task)">
+										<span *ngIf="task!==editTask">{{task.Product_name}}</span>
+										<input *ngIf="task==editTask" [(ngModel)]="task.Product_name" (blur)="update()" (keyup.enter)="update()">
+									</a>
+								</td>
+								<td>
+									<a (click)="edit(task)">
+										<span *ngIf="task!==editTask">{{task.Categories}}</span>
+										<input *ngIf="task==editTask" [(ngModel)]="task.Categories" (blur)="update()" (keyup.enter)="update()">
+									</a>
+								</td>
+								<td>
+									<a (click)="edit(task)">
+										<span *ngIf="task!==editTask">{{task.subCategory}}</span>
+										<input *ngIf="task==editTask" [(ngModel)]="task.subCategory" (blur)="update()" (keyup.enter)="update()">
+									</a>
+								</td>
+								<td>
+									<a (click)="edit(task)">
+										<span *ngIf="task!==editTask">{{task.description}}</span>
+										<input *ngIf="task==editTask" [(ngModel)]="task.description" (blur)="update()" (keyup.enter)="update()">
+									</a>
+								</td>
+								<td>
+									<a (click)="edit(task)">
+										<!--we suppose that the price in database is in DH-->
+										<div *ngIf="((message == 'DH') && (task!==editTask))">
+											<p class="price" >{{task.Product_price}}MAD</p>
+										</div>
+										<div *ngIf="((message == 'Euro') && (task!==editTask))">
+											<p class="price"> {{task.Product_price * 0.093 | number:'0.0-2'}}€ </p>
+										</div>
+										<div *ngIf="((message == 'Dollar')  && (task!==editTask))">
+											<p class="price"> {{task.Product_price * 0.10 | number:'0.0-2'}}$</p>
+										</div>          
+										<input *ngIf="task==editTask" [(ngModel)]="task.Product_price" (blur)="update()" (keyup.enter)="update()">
+									</a>
+								</td>
+								<td>
+									<a (click)="edit(task)">
+										<span *ngIf="task!==editTask">{{task.gender}}</span>
+										<input *ngIf="task==editTask" [(ngModel)]="task.gender" (blur)="update()" (keyup.enter)="update()">
+									</a>
+								</td>
+								<td>
+									<a (click)="edit(task)">
+										<span *ngIf="task!==editTask">{{task.baseColor}}</span>
+										<input *ngIf="task==editTask" [(ngModel)]="task.baseColor" (blur)="update()" (keyup.enter)="update()">
+									</a>
+								</td>
+								<td>
+									<a (click)="edit(task)">
+										<span *ngIf="task!==editTask">{{task.Product_img}}</span>
+										<input *ngIf="task==editTask" [(ngModel)]="task.Product_img" (blur)="update()" (keyup.enter)="update()">
+									</a>
+								</td>
+								<td class="text-right">
+									<button class="btn btn-danger" title="delete task" (click)="delete(task)">Delete</button>
+								</td>
+							</tr>
+						</tbody>
+						
+                    </table>
+        </div>
+        </div>
+        <hr/>
+            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+		<br>
+		

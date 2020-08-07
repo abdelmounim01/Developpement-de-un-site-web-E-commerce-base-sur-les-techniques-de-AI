@@ -1,0 +1,6 @@
+<ul class="list-group list-group-flush" *ngFor = "let meta of metauser" >
+    <li class="list-group-item" *ngIf="(meta.rating == 1)">
+      
+      <span >{{meta.username}} rated  <a href="/product/{{meta.produitId}}"><strong class="text-muted d-block mb-2">{{meta.Product_name}}</strong></a></span> 
+    </li>
+</ul>

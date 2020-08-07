@@ -1,0 +1,70 @@
+<app-alerts></app-alerts>
+<br>
+<br>
+
+<div class="py-5">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <span class="anchor" id="formLogin"></span>
+
+      <!-- form card login -->
+      <div class="card rounded-0">
+        <div class="card-header">
+          <h3 class="mb-0">Login</h3>
+        </div>
+
+        <div class="card-body">
+          <form class="form" 
+                [formGroup]="form"
+                (submit)="loginUser(Email.value,Password.value);"                  >
+           
+                <div class="form-group">
+                <label for="email">email</label>
+                <input type="text"
+                      class="form-control" 
+                      formControlName="email"
+                      id="email"
+                      #Email
+                      required
+                      email
+                      placeholder="eg:ax@gmail.com"
+                      >
+                      <div class="alert alert-danger" *ngIf="form.get('email').touched && form.get('email').invalid">
+                         <div *ngIf="form.get('email').errors.required"  >
+                         email is Required
+                         </div>
+                         <div *ngIf="form.get('email').errors.email"  >
+                           please enter a valid form of email
+                         </div>
+
+                     </div>
+
+                <label for="password">Password</label>
+                        <input type="password"
+                              class="form-control" 
+                              formControlName="password"
+                              id="password"
+                              #Password
+                              minlength="5"
+                              maxlength="15"
+                              required
+                              >
+          </div>          
+            <input type="submit" value="login" [disabled]="!form.valid" class="btn btn-primary float-right "><br>
+          </form>
+          <a href="app-register" class="pull-left">Register</a>
+        </div>
+        
+        <!--/card-block-->
+      </div>
+      <!-- /form card login -->
+
+    </div>
+
+
+  </div>
+</div>
+
+
+<ngx-loading-bar color="red"  ref="router"></ngx-loading-bar>
+<ngx-loading-bar color="red"  ref="http"></ngx-loading-bar>

@@ -1,0 +1,313 @@
+<!--Header-->
+<app-navbar-visiteur></app-navbar-visiteur>
+
+<!--Navbar of choices-->
+<!--Navbar-->
+<nav class="navbar navbar-expand-sm bg-light">
+    <div *ngIf="(categorie == 'Books')">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/api/visiteur/{{categorie}}">All</a>
+                </li>
+            <li class="nav-item" [class.active]="subCategorie == 'literature'">
+                <a class="nav-link" href="/api/visiteur/{{categorie}}/literature">literature</a>
+            </li>
+            <li class="nav-item" [class.active]="subCategorie == 'families & relationship'">
+                <a class="nav-link"  href="/api/visiteur/{{categorie}}/families & relationship">Families and Relationship</a>
+            </li>
+            <li class="nav-item" [class.active]="subCategorie == 'fantasy'">
+                <a class="nav-link" href="/api/visiteur/{{categorie}}/fantasy">Fantasy</a>
+            </li>
+            <li class="nav-item" [class.active]="subCategorie == 'children'">
+                <a class="nav-link" href="/api/visteur/{{categorie}}/children">Children</a>
+            </li>
+            <li class="nav-item" [class.active]="subCategorie == 'classics'">
+                <a class="nav-link" href="/api/visiteur/{{categorie}}/classics">Classics</a>
+            </li>
+            <li class="nav-item" [class.active]="subCategorie == 'crime'">
+                <a class="nav-link" href="/api/visiteur/{{categorie}}/crime">Crime</a>
+            </li>
+            <li class="nav-item" [class.active]="subCategorie == 'short stories'">
+                <a class="nav-link" href="/api/visiteur/{{categorie}}/short stories">Short stories</a>
+            </li>
+            <li class="nav-item" [class.active]="subCategorie == 'young adults'">
+                <a class="nav-link" href="/api/visiteur/{{categorie}}/young adults">Young Adults</a>
+            </li>
+            <li class="nav-item" [class.active]="subCategorie == 'romance'">
+                <a class="nav-link" href="/api/visiteur/{{categorie}}/romance">Romance</a>
+            </li>
+            <li class="nav-item" [class.active]="subCategorie == 'science fiction'">
+                <a class="nav-link" href="/api/visiteur/{{categorie}}/science fiction">Science fiction</a>
+            </li>
+            <li class="nav-item" [class.active]="subCategorie == 'general'">
+                <a class="nav-link" href="/api/visiteur/{{categorie}}/general">General</a>
+            </li>
+            <li class="nav-item" [class.active]="subCategorie == 'others'">
+                <a class="nav-link" href="/api/visiteur/{{categorie}}/others">Others</a>
+            </li>
+            </ul>
+    </div>
+
+    <div *ngIf="(categorie == 'Accessories')">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/api/visiteur/{{categorie}}">All</a>
+            </li>
+            <li class="nav-item" [class.active]="subCategorie == 'belts'">
+                <a class="nav-link" href="/api/visiteur/{{categorie}}/belts">Belts</a>
+            </li>
+            <li class="nav-item" [class.active]="subCategorie == 'jewellery'">
+                <a class="nav-link" href="/api/visiteur/{{categorie}}/jewellery">Jewellery</a>
+            </li>
+            <li class="nav-item" [class.active]="subCategorie == 'eyewea'">
+                <a class="nav-link" href="/api/visiteur/{{categorie}}/eyewea">Eyewear</a>
+            </li>
+            <li class="nav-item" [class.active]="subCategorie == 'bags'">
+                <a class="nav-link" href="/api/visiteur/{{categorie}}/bags">Bags</a>
+            </li>
+            <li class="nav-item" [class.active]="subCategorie == 'headwear'">
+                <a class="nav-link" href="/api/visiteur/{{categorie}}/headwear">Headwear</a>
+            </li>
+            <li class="nav-item" [class.active]="subCategorie == 'wallets'">
+                <a class="nav-link" href="/api/visiteur/{{categorie}}/wallets">Wallets</a>
+            </li>
+            <li class="nav-item" [class.active]="subCategorie == 'cufflinks'">
+                <a class="nav-link" href="/api/visiteur/{{categorie}}/cufflinks">Cufflinks</a>
+            </li>
+            <li class="nav-item" [class.active]="subCategorie == 'gloves'">
+                <a class="nav-link" href="/api/visiteur/{{categorie}}/gloves">Gloves</a>
+            </li>
+            <li class="nav-item" [class.active]="subCategorie == 'watches'">
+                <a class="nav-link" href="/api/visiteur/{{categorie}}/watches">Watches</a>
+            </li>
+            <li class="nav-item" [class.active]="subCategorie == 'accessory gift set'">
+                <a class="nav-link" href="/api/visiteur/{{categorie}}/accessory gift set">Gift set</a>
+            </li>
+        </ul>
+</div>
+
+<div *ngIf="(categorie == 'Apparel')">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}">All</a>
+        </li>
+        <li class="nav-item" [class.active]="subCategorie == 'scarves'">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}/scarves">Scarves</a>
+        </li>
+        <li class="nav-item" [class.active]="subCategorie == 'innerwear'">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}/innerwear">Innerwear</a>
+        </li>
+        <li class="nav-item" [class.active]="subCategorie == 'bottomwear'">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}/bottomwear">Bottomwear</a>
+        </li>
+        <li class="nav-item" [class.active]="subCategorie == 'topwear'">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}/topwear">Topwear</a>
+        </li>
+        <li class="nav-item" [class.active]="subCategorie == 'apparel set'">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}/apparel set">Apparel set</a>
+        </li>
+        <li class="nav-item" [class.active]="subCategorie == 'dress'">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}/dress">Dress</a>
+        </li>
+        <li class="nav-item" [class.active]="subCategorie == 'ties'">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}/ties">Ties</a>
+        </li>
+        <li class="nav-item" [class.active]="subCategorie == 'stoles'">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}/stoles">Stoles</a>
+        </li>
+        <li class="nav-item" [class.active]="subCategorie == 'loungewear and nightwear'">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}/loungewear and nightwear">Loungewear and nightwear</a>
+        </li>
+        <li class="nav-item" [class.active]="subCategorie == 'saree'">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}/saree">Saree</a>
+        </li>
+    </ul>
+</div>
+
+<div *ngIf="(categorie == 'Footwear')">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}">All</a>
+        </li>
+        <li class="nav-item" [class.active]="subCategorie == 'socks'">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}/socks">Socks</a>
+        </li>
+        <li class="nav-item" [class.active]="subCategorie == 'shoes'">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}/shoes">Shoes</a>
+        </li>
+        <li class="nav-item" [class.active]="subCategorie == 'flip flops'">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}/flip flops">Flip flops</a>
+        </li>
+        <li class="nav-item" [class.active]="subCategorie == 'sandal'">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}/sandal">Sandals</a>
+        </li>
+        <li class="nav-item" [class.active]="subCategorie == 'shoe accessories'">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}/shoe accessories">Shoe Accessories</a>
+        </li>
+    </ul>
+</div>
+
+<div *ngIf="(categorie == 'Personal Care')">
+    <ul class="navbar-nav">
+        <li class="nav-item" >
+            <a class="nav-link" href="/api/visiteur/{{categorie}}">All</a>
+        </li>
+        <li class="nav-item" [class.active]="subCategorie == 'fragrance'">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}/fragrance">Fragrance</a>
+        </li>
+        <li class="nav-item" [class.active]="subCategorie == 'lips'">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}/lips">Lips</a>
+        </li>
+        <li class="nav-item" [class.active]="subCategorie == 'eyes'">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}/eyes">Eyes</a>
+        </li>
+        <li class="nav-item" [class.active]="subCategorie == 'hair'">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}/hair">Hair</a>
+        </li>
+        <li class="nav-item" [class.active]="subCategorie == 'makeup'">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}/makeup">makeup</a>
+        </li>
+        <li class="nav-item" [class.active]="subCategorie == 'bath and body'">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}/bath and body">Bath and body</a>
+        </li>
+        <li class="nav-item" [class.active]="subCategorie == 'skin care'">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}/skin care">Skin Care</a>
+        </li>
+        <li class="nav-item" [class.active]="subCategorie == 'nails'">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}/nails">Nails</a>
+        </li>
+  
+    </ul>
+</div>
+
+<div *ngIf="(categorie == 'Phones')">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}">All Phones</a>
+        </li>
+        <li class="nav-item" [class.active]="subCategorie == 'android'">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}/android">Android</a>
+        </li>
+        <li class="nav-item" [class.active]="subCategorie == 'honor'">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}/honor">Honor</a>
+        </li>
+        <li class="nav-item" [class.active]="subCategorie == 'vivo'">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}/vivo">Vivo</a>
+        </li>
+        <li class="nav-item" [class.active]="subCategorie == 'sony'">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}/sony">Sony</a>
+        </li>
+        <li class="nav-item" [class.active]="subCategorie == 'oppo'">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}/oppo">Oppo</a>
+        </li>
+        <li class="nav-item" [class.active]="subCategorie == 'redmi'">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}/redmi">Redmi</a>
+        </li>
+        <li class="nav-item" [class.active]="subCategorie == 'nokia'">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}/nokia">Nokia</a>
+        </li>
+        <li class="nav-item" [class.active]="subCategorie == 'oneplus'">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}/oneplus">Oneplus</a>
+        </li>
+        <li class="nav-item" [class.active]="subCategorie == 'apple'">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}/apple">Apple</a>
+        </li>
+        <li class="nav-item" [class.active]="subCategorie == 'samsung'">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}/samsung">Samsung</a>
+        </li>
+        <li class="nav-item" [class.active]="subCategorie == 'huawei'">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}/huawei">Huawei</a>
+        </li>
+    </ul>
+</div>
+
+<div *ngIf="(categorie == 'Sporting Goods')">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}">All</a>
+        </li>
+        <li class="nav-item" [class.active]="subCategorie == 'sports equipment'">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}/sports equipment">Sports equipement</a>
+        </li>
+        <li class="nav-item" [class.active]="subCategorie == 'water bottle'">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}/water bottle">Water Bottle</a>
+        </li>
+        <li class="nav-item" [class.active]="subCategorie == 'bags'">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}/bags">Bags</a>
+        </li>
+        <li class="nav-item" [class.active]="subCategorie == 'headwear'">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}/headwear">Headwear</a>
+        </li>
+        <li class="nav-item" [class.active]="subCategorie == 'eyewear'">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}/eyewear">Eyewear</a>
+        </li>
+        <li class="nav-item" [class.active]="subCategorie == 'watches'">
+            <a class="nav-link" href="/api/visiteur/{{categorie}}/watches">Watches</a>
+        </li>
+    </ul>
+</div>
+</nav>
+<!--the result of choice whether by category or by subCategory-->
+<div class="input-group form">
+    <input type="text"
+           class="form-control" 
+           placeholder="Search by Noun of product or by price" 
+           [(ngModel)]="search"/>
+</div>
+
+
+    <div *ngFor="let task of tasks | filter:search | paginate: { itemsPerPage: 24, currentPage: p }  " >
+            <div class="col" style="float: left;  width:250px ; height: 400px; margin-bottom: 20px;">
+                <div class="card">
+                <a href="/product/visiteur/{{task.produitId}}">
+                <img src="{{task.Product_img}}" alt="">
+                <h1>{{task.Product_name}}</h1>
+                <!--we suppose that the price in database is in DH-->
+                <div *ngIf="message == 'DH'">
+                    <p class="price" >{{task.Product_price}}MAD</p>
+                </div>
+                <div *ngIf="message == 'Euro'">
+                    <p class="price"> {{task.Product_price * 0.093 | number:'0.0-2'}}€ </p>
+                </div>
+                <div *ngIf="message == 'Dollar'">
+                    <p class="price"> {{task.Product_price * 0.10 | number:'0.0-2'}}$</p>
+                </div>  
+            </a>
+            </div>
+        </div>
+    </div>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
+
+<div class="edit ">
+    <h2>Most Popular</h2>
+
+    <ngx-slick-carousel class="carousel" 
+                        #slickModal="slick-carousel" 
+                        [config]="slideConfig" 
+                        >
+
+        <div ngxSlickItem *ngFor="let task of populars" style="float: left">
+            <div class="card" >
+                <a href="/product/visiteur/{{task.produitId}}">
+                    <img src="{{task.Product_img}}" alt="">
+                </a>
+                    
+                    <!--we suppose that the price in database is in DH-->
+                    <div *ngIf="message == 'DH'">
+                        <p class="price" >{{task.Product_price}}MAD</p>
+                    </div>
+                    <div *ngIf="message == 'Euro'">
+                        <p class="price"> {{task.Product_price * 0.093 | number:'0.0-2'}}€ </p>
+                    </div>
+                    <div *ngIf="message == 'Dollar'">
+                        <p class="price"> {{task.Product_price * 0.10 | number:'0.0-2'}}$</p>
+                    </div>  
+                    <h5>{{task.Product_name}}</h5>
+            </div>
+                
+        </div>
+    </ngx-slick-carousel>
+</div>
+
+
+<app-footer-visiteur></app-footer-visiteur>
