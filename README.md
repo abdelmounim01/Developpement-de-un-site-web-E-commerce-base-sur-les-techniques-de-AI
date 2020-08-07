@@ -91,9 +91,9 @@ avons utilisé pour réaliser notre travail.
 - Robo 3T
 
 **Langages utilisés**
-- Python
+- Python 3.8
 - Flask API
-- Angular
+- Angular v9
 - MongoDB
 
 **Librairies**
