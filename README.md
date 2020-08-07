@@ -105,7 +105,7 @@ avons utilisé pour réaliser notre travail.
 
 ---
 ## Réalisation_de_l’application
-<a href="{https://www.youtube.com/watch?v=xxDjU0nhTfY}" title="Link Title"><img src="{image-url}" alt="Alternate Text" /></a>
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/watch?v=xxDjU0nhTfY/0.jpg)](https://www.youtube.com/watch?v=xxDjU0nhTfY)
 
 
 ---
