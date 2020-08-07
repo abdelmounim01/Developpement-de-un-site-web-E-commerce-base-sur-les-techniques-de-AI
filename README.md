@@ -8,8 +8,8 @@
 - [Réalisation de l’application](#Réalisation_de_l’application)
 - [Conclusion](#Conclusion)
 
-## Introduction
 ---
+## Introduction
 Les systèmes de recommandation ont une place particulièrement importante dans le marketing en
 ligne. Grâce à eux, des entreprises du e-commerce ont pu se différencier de leurs concurrents,
 faciliter la vie des clients actuels et atteindre leurs clients potentiels.
@@ -17,8 +17,8 @@ C’est pour cela notre projet est le développement d'un système de recommanda
 d’un chatbot et de faire des recherches sur les produits soit par image soit par texte en utilisant les
 techniques de NLP, Machine Learning et Deep Learning.
 
-## Problématique
 ---
+## Problématique
 A partir des constatations de la majorité des sites e-commerce déjà existes dans l'internet, plusieurs
 problématiques ont été remontées à savoir :
 - La croissance explosive de la quantité d'informations numériques disponibles et du nombre
@@ -53,8 +53,8 @@ vendent dans sa plateforme et enfin pour satisfait le client le maximum possible
 aller acheter dans un autre plateforme .
 
 
-## Solutions
 ---
+## Solutions
 La solution retenue pour atteindre notre objectif et pour résoudre le problème de réalisation de
 notre projet se résume dans les étapes suivantes :
 Collection et prétraitement les informations de chaque client et leurs interactions avec les
@@ -79,21 +79,23 @@ motivé d’avoir plus de produites.
 Et autres fonctionnalités notamment : Plus populaire Product, les vendeurs peut avoir des
 statistiques pour améliorer leur store etc.
 
-
-## Technologies_et_outils_de_développement
 ---
+## Technologies_et_outils_de_développement
 Cette section présente les différentes technologies et les outils que nous
 avons utilisé pour réaliser notre travail.
+
 **L’environnement de travail**
 - Anaconda
 - Spyder
 - Visual Studio
 - Robo 3T
+
 **Langages utilisés**
 - Python
 - Flask API
 - Angular
 - MongoDB
+
 **Librairies**
 - NumPy
 - Pandas
@@ -101,14 +103,13 @@ avons utilisé pour réaliser notre travail.
 - Scikit-learn
 - Pymongo
 
-
-## Réalisation_de_l’application
 ---
+## Réalisation_de_l’application
 [![Demo CountPages alpha](https://share.gifyoutube.com/KzB6Gb.gif)](https://www.youtube.com/watch?v=xxDjU0nhTfY)
 
 
-## Conclusion
 ---
+## Conclusion
 Le présent mémoire présente d’une manière explicite le déroulement de notre stage qui s’inscrit
 dans notre Projet Fin d’études du master en sciences et Techniques Mobiquité et Big Data.
 Ce stage, nous a été bénéfique sur plusieurs plans :
