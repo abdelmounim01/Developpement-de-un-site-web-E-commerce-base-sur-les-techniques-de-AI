@@ -85,7 +85,6 @@ Cette section présente les différentes technologies et les outils que nous
 avons utilisé pour réaliser notre travail.
 
 **L’environnement de travail**
-- Anaconda
 - Spyder
 - Visual Studio
 - Robo 3T
